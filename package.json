@@ -1,0 +1,35 @@
+{
+  "name": "dungeons-and-dragons",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV = production node app.js",
+    "server": "nodemon app.js",
+    "client": "yarn --cwd client start",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV_development concurrently \"npm run server\" \"yarn  client\""
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Roman Voloshchak <mrsharik213@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "http-auth-utils": "^3.0.1",
+    "http-headers": "^3.0.2",
+    "httpie": "^1.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.13",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
