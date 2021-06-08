@@ -1,6 +1,6 @@
 {
   "port": 5000,
-  "jwtSecret": "Koly hyu sosi",
+  "jwtSecret": "roshyk sobaka",
   "mongoUri": "mongodb+srv://rorshah72:147258369@cluster0.tw9lm.mongodb.net/app?retryWrites=true&w=majority",
   "baseUrl": "http://localhost:5000"
 }

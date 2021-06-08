@@ -8,10 +8,10 @@ module.exports = (req, res, next) => {
 
     try{
 
-        const token  = req.headers.autherization.split(' ')[1] // " Bearer Token"
+        const token  = req.headers.autherization.split(' ')[1] // "Bearer Token"
 
         if(!token) {
-          return  res.status(401).json({message: "Не авторизований"})
+          return res.status(401).json({message: "Не авторизований"})
         }
 
         const decoded = jwt.verify(token, config.get('jwtSecret'),{expiresIn: '1h'})

@@ -2,7 +2,7 @@ const {Router} = require('express')
 const bcrypt = require('bcryptjs')
 const config = require('config')
 const jwt = require('jsonwebtoken')
-const {check,validationResult} = require('express-validator')
+const {check, validationResult} = require('express-validator')
 const User = require('../models/User')
 const router = Router()
 
@@ -14,7 +14,6 @@ router.post(
     ],
     async (req, res) =>{
     try{
-
         const errors = validationResult(req)
 
         if (!errors.isEmpty()){
@@ -25,7 +24,6 @@ router.post(
         }
 
         const  {email, password} = req.body
-
         const  candidate = await User.findOne({email})
 
         if(candidate) {
@@ -36,7 +34,6 @@ router.post(
         const user = new User({email, password: hashedPassword})
 
         await user.save()
-
         res.status(201).json({message: 'Користувач створений'})
 
     }catch (e) {

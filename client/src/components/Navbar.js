@@ -18,7 +18,7 @@ export const NavBar = () =>{
                 <span className="brand-logo red-text">Пограй в Dungeons and dragons</span>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li><NavLink to = "/create">Створити</NavLink></li>
-                    <li><NavLink to = "/links">Список</NavLink></li>
+                    <li><NavLink to = "/characters">Список</NavLink></li>
                     <li><a href= "/" onClick={logoutHandler}>Вихід</a></li>
                 </ul>
             </div>
